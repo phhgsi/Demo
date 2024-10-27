@@ -1,0 +1,8 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+[remote "github"]
+	url = https://github.com/OnePlus-Nord4-devs/android_kernel_oneplus_sm7675.git
+	review = review.lineageos.org
+	projectname = OnePlus-Nord4-devs/android_kernel_oneplus_sm7675.git
+	fetch = +refs/heads/*:refs/remotes/github/*
