@@ -13,6 +13,7 @@
 ./drivers/soc/oplus/power
 ./drivers/input/uff_fp_drivers
 ./drivers/input/oplus_secure_drivers
+
 ./drivers/base/touchpanel_notify
 ./drivers/base/kernelFwUpdate
 ./drivers/misc/oplus_procs_load
