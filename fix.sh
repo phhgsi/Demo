@@ -3,12 +3,14 @@
 # Loop through all symlinks in the current directory and subdirectories
 find . -type l | while read symlink; do
     # Get the target of the symlink
-    target=$(readlink "$symlink")
+    target=$(readlink -f "$symlink")  # Use -f to resolve to an absolute path
 
     # Check if the target exists
     if [ -e "$target" ]; then
-        # Copy the target to the location of the symlink
-        cp -r "$target" "$(dirname "$symlink")/"
+        # Get the directory of the symlink
+        symlink_dir=$(dirname "$symlink")
+        # Copy the target to the symlink's directory
+        cp -r "$target" "$symlink_dir/"
         # Remove the symlink
         rm "$symlink"
     else
